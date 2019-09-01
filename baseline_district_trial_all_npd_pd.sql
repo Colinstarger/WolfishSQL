@@ -1,4 +1,5 @@
-#Baseline District Info - WHERE ALL CHARGES NP'D
+-- District Trial where ALL CHARGES NP'D (main query)
+-- This is the "middle ring" query
 select ci.casenumber, ci.county as jurisdiction, ci.issueddate, cbs.outcome as init_outcome, cbs.date as init_date, di.race, di.sex, di.zipcode, di.dob, 
 cdi.description as top_charge, cdi.disposition as top_disposition, cdi.dispositiondate as top_dispo_date
 from case_information ci

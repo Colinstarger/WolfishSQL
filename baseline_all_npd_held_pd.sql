@@ -1,5 +1,7 @@
--- A Complex query to get dates and charges for all NP'd cases where RELS=DISPO
--- Pull this into Pandas and run a series of different analyses
+-- District Trial where ALL CHARGES NP'D and where Held before trial(main query)
+-- This is the second subset  or the "innermost ring" query
+-- Complex query for all NP'd cases where RELS=DISPO
+
 select ci.casenumber, ci.county as jurisdiction, ci.issueddate, init.outcome as init_outcome, init.date as init_date, rels.date as rels_date, di.race, di.sex, di.zipcode, di.dob, 
 cdi.description as top_charge, cdi.disposition as top_disposition, cdi.dispositiondate as top_dispo_date
 from case_information ci 

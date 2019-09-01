@@ -1,5 +1,5 @@
-#Baseline District Info All NP'd- num charges
-
+-- District Trial where ALL CHARGES NP'D (num chargesquery)
+-- This is first subset or "middle ring" query
 select cdi.casenumber as casenumber, count(*) as num_charges
 from charge_and_disposition_information cdi
 inner join  case_information ci on cdi.casenumber = ci.casenumber

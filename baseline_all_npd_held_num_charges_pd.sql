@@ -1,6 +1,6 @@
--- A Complex query to get dates and charges for all NP'd cases where RELS=DISPO & NUM CHARGES ONLY
--- Pull this into Pandas and run a series of different analyses
-
+-- District Trial where ALL CHARGES NP'D and where Held before trial(num charges query)
+-- This is the second subset  or the "innermost ring" query
+-- Complex query for all NP'd cases where RELS=DISPO
 select cdi.casenumber as casenumber, count(*) as num_charges
 from case_information ci
 inner join event_history_information rels on rels.CaseNumber = ci.CaseNumber 
